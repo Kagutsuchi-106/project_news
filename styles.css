@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;500&display=swap');
 
 :root {
-    --dark: #2C2C2C;
-    --white: #FFFFFF;
-    --accent: #E63946;
-    --gray: #E5E5E5;
+    --dark: #2c2c2c;
+    --white: #ffffff;
+    --accent: #e63946;
+    --gray: #e5e5e5;
 }
 
 * {
@@ -389,7 +389,7 @@ footer p {
 .ticket-category-selector {
     margin-bottom: 30px;
     padding: 20px;
-    background-color: #FAFAFA;
+    background-color: #fafafa;
     border: 1px solid var(--gray);
 }
 
@@ -440,7 +440,7 @@ footer p {
 
 .map-legend {
     padding: 15px;
-    background-color: #FAFAFA;
+    background-color: #fafafa;
     border: 1px solid var(--gray);
     text-align: center;
 }
@@ -639,11 +639,11 @@ footer p {
     #map-container {
         height: 400px;
     }
-    
+
     .events-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .events-modal-content {
         max-width: 100%;
         max-height: 100vh;
@@ -691,7 +691,7 @@ footer p {
 .venue-event {
     margin-bottom: 12px;
     padding: 12px;
-    background-color: #FAFAFA;
+    background-color: #fafafa;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -726,6 +726,3 @@ footer p {
     opacity: 0.6;
     font-style: italic;
 }
-
-
-
