@@ -1,0 +1,10 @@
+.event-content__link {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color var(--transition-base);
+}
+
+.event-content__link:hover {
+    color: var(--color-dark);
+    text-decoration: underline;
+}

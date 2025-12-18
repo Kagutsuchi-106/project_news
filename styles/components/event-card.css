@@ -1,0 +1,96 @@
+.event-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.event-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
+    text-decoration: none;
+    color: inherit;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    flex-grow: 1;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(44, 44, 44, 0.12);
+}
+
+.event-card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.event-card__content {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-md);
+    flex-grow: 1;
+}
+
+.event-card__title {
+    margin-bottom: var(--spacing-sm);
+}
+
+.event-card__type {
+    font-family: var(--font-body);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+}
+
+.event-card__date {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--color-dark);
+    opacity: 0.7;
+    margin-bottom: var(--spacing-xs);
+}
+
+.event-card__price {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin-top: auto;
+}
+
+.favorite-btn {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-dark);
+    background-color: transparent;
+    border: 1px solid var(--color-dark);
+    padding: 10px var(--spacing-md);
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+.favorite-btn:hover {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+}
+
+.favorite-btn--active {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border-color: var(--color-accent);
+}
+
+.favorite-btn--active:hover {
+    background-color: var(--color-dark);
+    border-color: var(--color-dark);
+}
