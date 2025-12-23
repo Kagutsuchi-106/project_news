@@ -108,7 +108,7 @@ function renderBudget() {
 }
 
 function initTicketCategorySelector() {
-    const selector = document.getElementById('ticket-category');
+    const selector = document.getElementById('ticket-category-selector');
     if (!selector) {
         return;
     }

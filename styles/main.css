@@ -2,6 +2,7 @@
 @import url('./base/_variables.css');
 @import url('./base/_reset.css');
 @import url('./base/_typography.css');
+@import url('./base/_accessibility.css');
 
 /* Layout */
 @import url('./layout/header.css');
@@ -14,6 +15,7 @@
 @import url('./components/calendar.css');
 @import url('./components/budget.css');
 @import url('./components/modal.css');
+@import url('./components/filters.css');
 
 /* Pages */
 @import url('./pages/home.css');

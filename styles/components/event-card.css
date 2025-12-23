@@ -2,6 +2,28 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    animation: fadeInUp 0.4s ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.event-card-wrapper:nth-child(1) { animation-delay: 0.05s; }
+.event-card-wrapper:nth-child(2) { animation-delay: 0.1s; }
+.event-card-wrapper:nth-child(3) { animation-delay: 0.15s; }
+.event-card-wrapper:nth-child(4) { animation-delay: 0.2s; }
+.event-card-wrapper:nth-child(5) { animation-delay: 0.25s; }
+.event-card-wrapper:nth-child(6) { animation-delay: 0.3s; }
+.event-card-wrapper:nth-child(n+7) { animation-delay: 0.35s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .event-card {
@@ -11,13 +33,16 @@
     border: 1px solid var(--color-gray);
     text-decoration: none;
     color: inherit;
-    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
     flex-grow: 1;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .event-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 20px rgba(44, 44, 44, 0.12);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(44, 44, 44, 0.15);
+    border-color: var(--color-accent);
 }
 
 .event-card__image {
@@ -25,6 +50,11 @@
     height: 200px;
     object-fit: cover;
     display: block;
+    transition: transform var(--transition-base);
+}
+
+.event-card:hover .event-card__image {
+    transform: scale(1.05);
 }
 
 .event-card__content {
@@ -48,11 +78,31 @@
     font-weight: 500;
 }
 
+.event-card__genre {
+    font-family: var(--font-body);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-dark);
+    opacity: 0.6;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 400;
+}
+
 .event-card__date {
     font-family: var(--font-body);
     font-size: 14px;
     color: var(--color-dark);
     opacity: 0.7;
+    margin-bottom: var(--spacing-xs);
+}
+
+.event-card__artist,
+.event-card__venue {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--color-dark);
+    opacity: 0.6;
     margin-bottom: var(--spacing-xs);
 }
 
@@ -93,4 +143,20 @@
 .favorite-btn--active:hover {
     background-color: var(--color-dark);
     border-color: var(--color-dark);
+}
+
+.favorite-btn--animate {
+    animation: pulse 0.3s ease-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

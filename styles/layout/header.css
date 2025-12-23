@@ -35,3 +35,53 @@
 .nav__link:hover {
     color: var(--color-accent);
 }
+
+/* Адаптивность для header */
+@media (max-width: 768px) {
+    .header {
+        margin-bottom: var(--spacing-lg);
+        padding-bottom: var(--spacing-md);
+    }
+    
+    .header__title {
+        font-size: 24px;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .nav__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+    }
+    
+    .nav__item {
+        display: inline-block;
+        margin-right: var(--spacing-sm);
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .nav__link {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__title {
+        font-size: 20px;
+    }
+    
+    .nav__list {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+    
+    .nav__item {
+        margin-right: 0;
+        width: 100%;
+    }
+    
+    .nav__link {
+        display: block;
+        padding: var(--spacing-xs) 0;
+    }
+}

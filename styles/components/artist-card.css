@@ -41,3 +41,20 @@
     color: inherit;
     display: block;
 }
+
+/* Адаптивность для карточек художников */
+@media (max-width: 768px) {
+    .artist-card__image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .artist-card__image {
+        height: 200px;
+    }
+    
+    .artist-card__content {
+        padding: var(--spacing-sm);
+    }
+}

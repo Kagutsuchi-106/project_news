@@ -5,6 +5,7 @@
 
 .artist-profile__header {
     display: flex;
+    flex-direction: row;
     gap: var(--spacing-xl);
     margin-bottom: var(--spacing-xxl);
     align-items: flex-start;
@@ -19,7 +20,9 @@
 }
 
 .artist-profile__info {
-    flex-grow: 1;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .artist-profile__name {
@@ -51,11 +54,16 @@
     margin-bottom: var(--spacing-xxl);
 }
 
-.portfolio-grid {
+.portfolio-masonry {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-auto-rows: 10px;
     gap: var(--spacing-lg);
     margin-top: var(--spacing-lg);
+}
+
+.portfolio-item {
+    grid-row-end: span var(--row-span, 30);
 }
 
 .portfolio-item {
@@ -72,9 +80,10 @@
 
 .portfolio-item__image {
     width: 100%;
-    height: 200px;
+    height: auto;
     object-fit: cover;
     display: block;
+    aspect-ratio: 4 / 3;
 }
 
 .portfolio-item__content {
@@ -147,4 +156,34 @@
     text-decoration: none;
     color: inherit;
     display: block;
+}
+
+/* Адаптивность для страницы художника */
+@media (max-width: 768px) {
+    .artist-profile__header {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .artist-profile__image {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .portfolio-masonry {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-masonry {
+        grid-template-columns: 1fr;
+    }
+    
+    .artist-profile__image {
+        width: 100%;
+        height: auto;
+    }
 }
